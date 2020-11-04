@@ -20,3 +20,253 @@ a {
 img {
   max-width: 100%;
 }
+
+.hue-shift {
+  animation: hue-shift 5s infinite alternate;
+}
+
+.container {
+  max-width: 125rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  width: 100%;
+}
+
+.nav {
+  height: 10rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 3.5rem;
+  background: #feac5e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #4bc0c8,
+    #c779d0,
+    #feac5e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #4bc0c8,
+    #c779d0,
+    #feac5e
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  margin-right: 5rem;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.3 ease-in-out;
+}
+
+.nav-link:hover {
+  opacity: 0.6;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom right, #3b2e5a, #221f3b);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: 100vh;
+  background-image: url("./media/bg-pat.png");
+  background-size: cover;
+  opacity: 0.45;
+  z-index: -1;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.content-details {
+  max-width: 80%;
+}
+
+.title {
+  font-size: 6rem;
+  color: #fff;
+  font-weight: lighter;
+  margin-bottom: 1rem;
+}
+
+.paragraph {
+  color: #fff;
+  opacity: 0.7;
+  margin-bottom: 2.5rem;
+}
+
+.search input {
+  border: none;
+  outline-width: 0;
+  border-radius: 5rem;
+  padding: 2rem;
+}
+
+.search {
+  display: flex;
+  margin-bottom: 2.5rem;
+}
+
+.search-bar {
+  width: calc(100% - 0.5rem);
+}
+
+.search-btn {
+  width: 10rem;
+  background: #feac5e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #c779d0,
+    #feac5e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #c779d0, #feac5e);
+  color: #fff;
+  cursor: pointer;
+  margin-left: -10rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-btn:hover {
+  background: #c779d0;
+  background: -webkit-linear-gradient(to right, #c779d0, #feac5e);
+  background: linear-gradient(to right, #c779d0, #feac5e);
+}
+
+.sm-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
+.sm-link {
+  color: #fff;
+  opacity: 0.7;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.sm-link:hover {
+  opacity: 1;
+  background: #c779d0;
+  background: -webkit-linear-gradient(to top left, #c779d0, #feac5e);
+  background: linear-gradient(to top left, #c779d0, #feac5e);
+}
+
+.image-group {
+  text-align: center;
+  position: relative;
+}
+
+.large {
+  animation: move-up 2s infinite alternate;
+}
+
+.kidney {
+  position: absolute;
+  top: 2.5rem;
+  left: -1rem;
+  z-index: 10;
+  animation: move-down 2s infinite alternate;
+}
+
+.liquid {
+  position: absolute;
+  z-index: -1;
+}
+
+.liquid-1 {
+  top: -14rem;
+  left: 70%;
+  transform: translateX(-70%);
+}
+
+.liquid-2 {
+  top: 8rem;
+  left: -17rem;
+}
+
+.liquid-3 {
+  right: 3rem;
+  bottom: -25rem;
+}
+
+.liquid-4 {
+  left: -21rem;
+  bottom: -17rem;
+}
+
+@keyframes move-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(2rem);
+  }
+}
+
+@keyframes move-down {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2rem);
+  }
+}
+
+@keyframes hue-shift {
+  from {
+    filter: hue-rotate(0);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
