@@ -270,3 +270,70 @@ header {
     filter: hue-rotate(360deg);
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .image-group {
+    margin: 5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    align-items: center;
+  }
+  .content {
+    grid-template-columns: 1fr;
+    margin-bottom: 10rem;
+  }
+  .content-details {
+    order: 1;
+    max-width: 100%;
+  }
+  .title {
+    font-size: 3.5rem;
+  }
+  .paragraph {
+    font-size: 1.4rem;
+  }
+  .image-group {
+    margin-top: 10rem;
+  }
+  .large {
+    width: 70%;
+  }
+  .kidney {
+    width: 30%;
+    top: -1rem;
+    left: 5rem;
+  }
+  .liquid-1 {
+    display: none;
+  }
+  .liquid-2 {
+    left: 30rem;
+    bottom: -1rem;
+    top: revert;
+    width: 25%;
+  }
+  .liquid-3 {
+    right: -3rem;
+    bottom: -25rem;
+  }
+  .liquid-4 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav {
+    flex-direction: column;
+    height: 5.5rem;
+  }
+  .logo {
+    margin-top: 0.5rem;
+  }
+  .nav-item {
+    margin-top: 0.5rem;
+    margin-right: 2.5rem;
+  }
+}
